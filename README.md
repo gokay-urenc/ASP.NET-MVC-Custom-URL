@@ -1,0 +1,2 @@
+# ASP.NET-MVC-Custom-URL
+ ASP.NET MVC Özel URL. / ASP.NET MVC Custom URL.

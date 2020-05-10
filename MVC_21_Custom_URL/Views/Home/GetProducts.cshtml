@@ -1,0 +1,30 @@
+﻿@model IEnumerable<Product>
+@{
+    ViewBag.Title = "GetProducts";
+}
+
+<h2>GetProducts</h2>
+
+<div class="container">
+    <table class="table table-hover">
+        <thead>
+            <tr>
+                <th>ürün Adı:</th>
+                <th>Fiyat:</th>
+                <th>Stok:</th>
+                <th>Kategori:</th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (Product item in Model)
+            {
+            <tr>
+                <td>@Html.ActionLink(item.ProductName, "GetProduct", "Home", new { name = (item.Category.CategoryName + "/" + item.ProductName).Replace(' ', '-'), id = item.ProductID }, null)</td>
+                <td>@item.UnitPrice</td>
+                <td>@item.UnitsInStock</td>
+                <td>@item.Category.CategoryName</td>
+            </tr>
+            }
+        </tbody>
+    </table>
+</div>

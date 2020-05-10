@@ -1,0 +1,26 @@
+﻿@model Product
+@{
+    ViewBag.Title = "GetProduct";
+}
+
+<h2>GetProduct</h2>
+
+<div class="container">
+    <table>
+        <tr>
+            <td>@Html.DisplayNameFor(x => x.ProductName)</td>
+            <td>:</td>
+            <td>@Html.DisplayFor(x => x.ProductName)</td>
+        </tr>
+        <tr>
+            <td>Fiyatı</td>
+            <td>:</td>
+            <td>@Html.DisplayFor(x => x.UnitPrice)</td>
+        </tr>
+        <tr>
+            <td>Stok Durumu</td>
+            <td>:</td>
+            <td>@Html.DisplayFor(x => x.UnitsInStock)</td>
+        </tr>
+    </table>
+</div>

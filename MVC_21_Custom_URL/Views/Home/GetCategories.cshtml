@@ -1,0 +1,26 @@
+﻿@model IEnumerable<Category>
+@{
+    ViewBag.Title = "GetCategories";
+}
+
+<h2>GetCategories</h2>
+
+<div class="container">
+    <table class="table table-striped table-bordered">
+        <thead>
+            <tr>
+                <th>Kategori Adı:</th>
+                <th>Açıklaması:</th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (Category item in Model)
+            {
+                <tr>
+                    <td>@Html.ActionLink(item.CategoryName, "GetProducts", new { name = item.CategoryName.Replace(' ', '-')})</td>
+                    <td>@item.Description</td>
+                </tr>
+            }
+        </tbody>
+    </table>
+</div>
